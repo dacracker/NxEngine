@@ -6,12 +6,9 @@ os:
   - osx
 before_install:
   - brew update
-  - brew uninstall libtool && brew install libtool
   - brew install sdl2 sdl2_image
-  - brew upgrade icu4c
+  - brew uninstall icu4c && brew install icu4c
   - brew link --force icu4c 
-  - export PATH="/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:$PATH"
-  - export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
 script: 
   - mkdir build
   - cd build
