@@ -6,8 +6,7 @@ os:
   - osx
 before_install:
   - brew update
-  - brew install sdl2 sdl2_image python3 icu4c
-  - brew link --force icu4c
+  - brew install sdl2 sdl2_image
 script: 
   - mkdir build
   - cd build
