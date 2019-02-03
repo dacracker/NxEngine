@@ -11,7 +11,7 @@
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
  You should have received a copy of the GNU General Public License
- along with NyxEngine. If not, see <http://www.gnu.org/licenses/>.
+ along with NxEngine. If not, see <http://www.gnu.org/licenses/>.
  \***************************************************************************/
 
 #ifndef __NX_COMMON_H__
@@ -29,5 +29,13 @@
 #endif
 
 #define NX_UNUSED(x) (void)x;
+
+#define NX_MAX(a,b) ({ __typeof__ (a) _a = (a); \
+                      __typeof__ (b) _b = (b); \
+                      _a > _b ? _a : _b; })
+
+#define NX_MIN(a,b) ({ __typeof__ (a) _a = (a); \
+                      __typeof__ (b) _b = (b); \
+                      _a < _b ? _a : _b; })
 
 #endif

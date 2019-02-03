@@ -38,7 +38,7 @@ typedef void (*nx_test)(void*);
 
 NX_TEST_API void _nx_test_assert(struct nx_test_status *status, int line, const char *func, const char *file, int result);
 
-#define nx_test_assert(_expr_) _nx_test_assert((struct nx_test_status *)data, __LINE__, __func__, __FILE__, _expr)
+#define nx_test_assert(_expr_) _nx_test_assert((struct nx_test_status *)data, __LINE__, __func__, __FILE__, _expr_)
 
 #define nx_test_run(_test_ary_) struct nx_test_status test_status;\
                                 memset(&test_status, 0, sizeof(struct nx_test_status)); \
