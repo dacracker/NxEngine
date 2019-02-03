@@ -6,10 +6,8 @@ os:
   - osx
 before_install:
   - brew update
-  - brew install sdl2 sdl2_image
-  - brew uninstall icu4c && brew install icu4c
-  - brew link --force icu4c 
+  - brew install sdl2 sdl2_image 
 script: 
   - mkdir build
   - cd build
-  - cmake ../ && make
+  - CMAKE_PREFIX_PATH=/usr/local/Cellar/icu4c/62.1 cmake ../ && make
